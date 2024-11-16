@@ -1,0 +1,195 @@
+@import url("https://fonts.googleapis.com/css2?family=Arima:wght@100..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+/* Reseteo de valores */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  line-height: 1.5;
+  /* box-sizing: content-box; *valor por defecto*/
+}
+
+/* Estilos Generales de la página */
+body {
+  background-color: #f2efe9;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Arima", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  color: #151926;
+  text-align: center;
+}
+
+p,
+a {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+p {
+  color: #151926;
+  font-size: 1.6rem;
+}
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 3rem;
+}
+h3 {
+  font-size: 2rem;
+}
+main {
+  padding-top: 30px;
+}
+/* Estilos del header */
+.headerContainer {
+  height: 15vh;
+  position: sticky;
+  top: 0;
+  z-index: 1005;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .logo {
+    width: 300px;
+    height: 100px;
+    padding: 10px;
+  }
+  nav {
+    ul {
+      list-style: none;
+      li {
+        display: inline-block;
+        margin-right: 15px;
+      }
+      a {
+        text-decoration: none;
+        color: black;
+        font-size: 1.2rem;
+      }
+    }
+  }
+  background-color: rgba(217, 179, 145, 0.5);
+}
+
+/* Estilos sección principal del Index */
+.mainSection {
+  padding: 50px 0 50px 0;
+  background-image: url("../assets/img/banner_dulce_encuentro.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 80vh;
+  border-radius: 20px;
+  text-align: center;
+  filter: brightness(90%); /* Reduce la intensidad de la imagen de fondo */
+  div {
+    background-color: rgba(64, 35, 24, 0.8);
+    border-radius: 20px;
+    margin-bottom: 180px;
+    h1,
+    h2 {
+      color: white;
+      margin-top: 20px;
+    }
+  }
+  .mainText {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 20px;
+    padding: 10px;
+    p {
+      color: white;
+      padding-bottom: 10px;
+      font-size: 2rem;
+    }
+    a {
+      text-decoration: none;
+      color: white;
+      font-size: 1.6rem;
+      border: 4px solid #bf2806;
+      border-radius: 8px;
+      padding: 4px;
+    }
+  }
+}
+
+/* Estilos para postres destacados */
+.postresDestacados {
+  img {
+    width: 400px;
+  }
+  div {
+    margin: 20px;
+  }
+}
+/* Estilos para las reseñas */
+
+.reseñas {
+  .ctaReseñas {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 20px;
+    padding: 10px;
+    p {
+      margin-bottom: 10px;
+      padding-bottom: 10px;
+      font-size: 2rem;
+    }
+  }
+  img {
+    width: 400px;
+  }
+  div {
+    margin: 20px;
+  }
+  a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.6rem;
+    border: 4px solid #bf2806;
+    border-radius: 8px;
+    padding: 4px;
+    background-color: rgba(64, 35, 24, 0.8);
+    margin-bottom: 20px;
+  }
+}
+
+/* Estilos para sección nosotros */
+.nosotros {
+  img {
+    width: 400px;
+  }
+  div {
+    margin: 20px;
+  }
+}
+
+/* Estilos para el footer */
+footer {
+  background-color: rgba(217, 179, 145, 0.5);
+  .logo {
+    width: 300px;
+    height: 100px;
+    padding: 10px;
+  }
+  .fa-whatsapp {
+    font-size: 60px;
+    color: #25d366;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+  }
+}
