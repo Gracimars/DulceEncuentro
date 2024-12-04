@@ -10,7 +10,7 @@
 
 /* Estilos Generales de la página */
 body {
-  background-color: #f2efe9;
+  background-color: #8a522d;
 }
 
 h1,
@@ -23,7 +23,7 @@ h6 {
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
-  color: #151926;
+  color: whitesmoke;
   text-align: center;
 }
 
@@ -33,10 +33,7 @@ a {
   font-weight: 500;
   font-style: normal;
 }
-p {
-  color: #151926;
-  font-size: 1.6rem;
-}
+
 h1 {
   font-size: 4rem;
 }
@@ -84,7 +81,7 @@ main {
 
 /* Estilos sección principal del Index */
 .mainSection {
-  padding: 50px 0 50px 0;
+  padding: 50px 0 100px 0;
   background-image: url("../assets/img/banner_dulce_encuentro.png");
   background-size: cover;
   background-repeat: no-repeat;
@@ -92,48 +89,166 @@ main {
   height: 80vh;
   border-radius: 20px;
   text-align: center;
+  margin-bottom: 20px;
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: space-between;
+  align-items: center;
   filter: brightness(90%); /* Reduce la intensidad de la imagen de fondo */
-  div {
+  .mainText {
     background-color: rgba(64, 35, 24, 0.8);
     border-radius: 20px;
-    margin-bottom: 180px;
-    h1,
-    h2 {
-      color: white;
-      margin-top: 20px;
-    }
-  }
-  .mainText {
-    width: 100%;
     margin: 0 auto;
     text-align: center;
     border-radius: 20px;
     padding: 10px;
+    width: 80%;
     p {
       color: white;
       padding-bottom: 10px;
       font-size: 2rem;
     }
     a {
+      display: inline-block;
       text-decoration: none;
       color: white;
       font-size: 1.6rem;
-      border: 4px solid #bf2806;
+      border: 4px solid #a5673f;
       border-radius: 8px;
       padding: 4px;
+      transition: color 0.3s ease;
     }
+    a:hover {
+      color: #a5673f;
+    }
+  }
+}
+.mainTextMobile {
+  display: none;
+}
+/*media querys contenido principal index*/
+@media screen and (max-width: 768px) {
+  .mainSection {
+    background-image: none;
+  }
+  .mainTextMobile {
+    background-color: rgba(64, 35, 24, 0.8);
+    border-radius: 20px;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 20px;
+    padding: 10px;
+    width: 80%;
+    font-size: 1rem;
   }
 }
 
 /* Estilos para postres destacados */
 .postresDestacados {
-  img {
-    width: 400px;
-  }
-  div {
-    margin: 20px;
+  text-align: center; /* Centra el título */
+  padding: 20px; /* Espaciado alrededor de la sección */
+}
+
+.postresDestacados h2 {
+  margin-bottom: 20px; /* Espaciado debajo del título */
+}
+
+.galeriaDestacados {
+  display: flex; /* Activa el modelo Flexbox */
+  justify-content: center; /* Centra las tarjetas horizontalmente */
+  flex-wrap: wrap; /* Permite que las tarjetas pasen a la siguiente fila si no caben */
+  gap: 20px; /* Espacio entre las tarjetas */
+  margin: 0 auto; /* Centra todo el contenedor */
+}
+
+.cardDestacados {
+  display: flex; /* Flexbox interno para alinear contenido */
+  flex-direction: column; /* Apila los elementos de la tarjeta */
+  align-items: center; /* Centra los elementos dentro de la tarjeta */
+  text-align: center; /* Centra texto */
+  padding: 15px; /* Espaciado interno */
+  border: 4px solid #a5673f; /* Borde */
+  border-radius: 10px; /* Bordes redondeados */
+  background-color: rgba(217, 179, 145, 0.5);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+  width: calc(100% / 3 - 20px); /* Tres tarjetas por fila, ajustable */
+  max-width: 300px; /* Tamaño máximo */
+  box-sizing: border-box;
+  height: 100%; /* Incluye padding en el ancho */
+}
+
+.cardDestacados img {
+  width: 100%; /* Imagen ocupa el ancho del contenedor */
+  height: 150px; /* Altura fija para uniformar las imagenes */
+  border-radius: 5px; /* Bordes redondeados */
+  object-fit: cover; /* Asegura que la imagen se recorte proporcionalmente */
+  margin-bottom: 10px; /* Espaciado inferior */
+}
+.cardDestacados h3,
+.cardDestacados h4,
+.cardDestacados a {
+  margin: 10px 0; /* Margen uniforme */
+}
+.cardDestacados h3 {
+  font-size: 1.2rem; /* Tamaño del título del postre */
+  margin: 10px 0; /* Espaciado vertical */
+}
+
+.cardDestacados h4 {
+  font-size: 1rem; /* Tamaño del precio */
+  margin-bottom: 10px; /* Espaciado inferior */
+}
+
+.cardDestacados a {
+  text-decoration: none; /* Sin subrayado */
+  background-color: #a5673f; /* Fondo del botón */
+  color: #fff; /* Texto blanco */
+  padding: 8px 12px; /* Espaciado interno */
+  border-radius: 5px; /* Bordes redondeados */
+  transition: background-color 0.3s; /* Animación de transición */
+}
+
+.cardDestacados a:hover {
+  background-color: #87492d; /* Color más oscuro al pasar el mouse */
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .cardDestacados {
+    width: calc(100% / 2 - 20px); /* Dos tarjetas por fila */
   }
 }
+
+@media (max-width: 480px) {
+  .cardDestacados {
+    width: 100%; /* Una tarjeta por fila */
+  }
+}
+
+/* .postresDestacados {
+  .galeriaDestacados {
+    padding: 20px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    .cardDestacados {
+      text-align: center;
+      padding: 10px;
+      border: 4px solid #a5673f;
+      border-radius: 5px;
+      width: 70%;
+      margin: 0 auto;
+
+      img {
+        width: 200px;
+        object-fit: cover;
+      }
+    }
+  }
+} */
 /* Estilos para las reseñas */
 
 .reseñas {
@@ -157,7 +272,6 @@ main {
   }
   a {
     text-decoration: none;
-    color: white;
     font-size: 1.6rem;
     border: 4px solid #bf2806;
     border-radius: 8px;
@@ -186,6 +300,7 @@ footer {
   bottom: 0;
   left: 0;
   z-index: 100;
+  height: 40vh;
   .footerContainer {
     display: flex;
     justify-content: space-between;
@@ -268,6 +383,7 @@ footer {
     .footerCopy {
       text-align: center;
       width: 100%;
+      height: auto;
       p {
         font-size: small;
       }
@@ -282,7 +398,7 @@ footer {
     }
   }
 }
-/* Media Query para pantallas pequeñas */
+/* Media Query footer */
 @media (max-width: 768px) {
   footer {
     .footerContainer {
