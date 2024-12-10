@@ -225,32 +225,7 @@ main {
   }
 }
 
-/* .postresDestacados {
-  .galeriaDestacados {
-    padding: 20px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 10px;
-    .cardDestacados {
-      text-align: center;
-      padding: 10px;
-      border: 4px solid #a5673f;
-      border-radius: 5px;
-      width: 70%;
-      margin: 0 auto;
-
-      img {
-        width: 200px;
-        object-fit: cover;
-      }
-    }
-  }
-} */
 /* Estilos para las reseñas */
-
 .reseñas {
   .ctaReseñas {
     width: 100%;
@@ -283,11 +258,69 @@ main {
 
 /* Estilos para sección nosotros */
 .nosotros {
-  img {
-    width: 400px;
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(217, 179, 145, 0.2); /* Fondo suave */
+  height: 100vh;
+  width: 100%;
+}
+
+.nosotros h2 {
+  margin-bottom: 20px;
+}
+
+.contenedorNosotros {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.nosotrosImg {
+  background-image: url("../assets/img/ownerpastry.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  object-fit: cover;
+  width: 50%;
+  height: 300px;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.nosotrosText {
+  width: 50%;
+  font-size: 1.6rem;
+  line-height: 1.8;
+  color: #fff;
+  text-align: justify;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .nosotros h2 {
+    font-size: 1.4rem; /* Tamaño más pequeño para títulos */
   }
-  div {
-    margin: 20px;
+
+  .nosotrosText {
+    font-size: 1.2rem;
+  }
+
+  .contenedorNosotros {
+    flex-direction: column; /* Apila los elementos */
+    align-items: center;
+    gap: 20px;
+  }
+
+  .nosotrosImg,
+  .nosotrosText {
+    width: 100%;
+  }
+
+  .nosotrosImg {
+    height: 200px; /* Altura ajustada en pantallas pequeñas */
   }
 }
 
