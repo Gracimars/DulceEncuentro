@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Arima:wght@100..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+
+:root {
+  --h3-size: 1.5rem; /* Estándar para h3 */
+}
 /* Reseteo de valores */
 * {
   margin: 0;
@@ -100,7 +104,7 @@ main {
     }
   }
 }
-/* MediaQuerys Navbar */
+/* Responsividad */
 
 @media screen and (max-width: 768px) {
   .headerContainer {
@@ -292,32 +296,101 @@ main {
 
 /* Estilos para las reseñas */
 .reseñas {
-  .ctaReseñas {
-    width: 100%;
-    margin: 0 auto;
-    text-align: center;
-    border-radius: 20px;
-    padding: 10px;
-    p {
-      margin-bottom: 10px;
-      padding-bottom: 10px;
-      font-size: 2rem;
-    }
+  text-align: center;
+  padding: 20px; /* Espaciado alrededor de la sección */
+  background-color: rgba(217, 179, 145, 0.2); /* Fondo suave */
+}
+
+.reseñas a {
+  text-decoration: none; /* Sin subrayado */
+  background-color: #a5673f; /* Fondo del botón */
+  color: #fff; /* Texto blanco */
+  padding: 8px 12px; /* Espaciado interno */
+  border-radius: 5px; /* Bordes redondeados */
+  transition: background-color 0.3s; /* Animación de transición */
+}
+
+.reseñas a:hover {
+  background-color: #87492d; /* Color más oscuro al pasar el mouse */
+}
+
+.galeriaClientes {
+  padding: 30px;
+  margin: 0 auto;
+  width: 80%; /* Ajustar el ancho */
+  display: flex;
+  justify-content: space-evenly;
+  row-gap: 20px; /* Espaciado entre filas */
+  column-gap: 20px; /* Espaciado entre columnas */
+  flex-wrap: wrap; /* Permite que las tarjetas pasen a la siguiente fila si no caben */
+}
+
+.tarjetaCliente {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border: 2px solid #a5673f; /* Borde */
+  border-radius: 10px; /* Bordes redondeados */
+  background-color: rgba(217, 179, 145, 0.3);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+  padding: 10px;
+  width: calc(100% / 3 - 20px); /* Tres tarjetas por fila */
+  max-width: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efecto en hover */
+}
+
+.tarjetaCliente:hover {
+  transform: translateY(-5px); /* Eleva la tarjeta */
+  box-shadow: 0 6px 12px rgba(184, 31, 31, 0.599); /* Sombra más intensa */
+}
+
+.tarjetaCliente img {
+  width: 100%;
+  height: 200px; /* Altura fija para uniformar las imágenes */
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 10px; /* Espaciado inferior */
+}
+
+.tarjetaCliente h3 {
+  font-size: var(--h3-size); /* Usa la variable global para h3 */
+  margin-top: 10px;
+}
+
+.tarjetaCliente p {
+  font-size: 1rem;
+  line-height: 1.4;
+  margin-top: 5px;
+  color: #fff;
+}
+
+/* Media Queries para pantallas pequeñas */
+@media (max-width: 768px) {
+  .galeriaClientes {
+    width: 100%; /* Ajustar al 100% en pantallas pequeñas */
   }
-  img {
-    width: 400px;
+
+  .tarjetaCliente {
+    width: calc(100% / 2 - 15px); /* Dos tarjetas por fila */
   }
-  div {
-    margin: 20px;
+
+  .reseñas h2 {
+    font-size: 1.5rem; /* Reducir tamaño del título */
   }
-  a {
-    text-decoration: none;
-    font-size: 1.6rem;
-    border: 4px solid #bf2806;
-    border-radius: 8px;
-    padding: 4px;
-    background-color: rgba(64, 35, 24, 0.8);
-    margin-bottom: 20px;
+}
+
+@media (max-width: 480px) {
+  .tarjetaCliente {
+    width: 100%; /* Una tarjeta por fila */
+  }
+
+  .reseñas a {
+    padding: 8px 12px; /* Reducir tamaño del botón */
+  }
+
+  .reseñas h2 {
+    font-size: 1.2rem; /* Reducir aún más el título */
   }
 }
 
@@ -356,9 +429,11 @@ main {
 }
 
 .nosotrosText {
+  p {
+    line-height: 1.4;
+  }
   width: 50%;
-  font-size: 1.6rem;
-  line-height: 1.8;
+  font-size: 1.4rem;
   color: #fff;
   text-align: justify;
 }
