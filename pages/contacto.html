@@ -3,11 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dulce Encuentro Pastelería</title>
     <script
       src="https://kit.fontawesome.com/1568c17fec.js"
       crossorigin="anonymous"
     ></script>
-    <title>Dulce Encuentro Pastelería</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
     <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="../css/estilos.css" />
     <script defer src="../js/index.js"></script>
@@ -35,7 +41,63 @@
         </ul>
       </nav>
     </header>
-    <main>Contacto probando</main>
+    <main>
+      <section class="container d-flex flex-column align-items-center my-5">
+        <h1 class="mb-4 text-center">Contactanos</h1>
+        <form action="" class="row g-3 w-100 w-md-50" id="miFormulario">
+          <!-- Campo Nombre -->
+          <div class="col-md-6">
+            <label class="form-label" for="nombre">Nombre Completo:</label>
+            <input
+              class="form-control"
+              type="text"
+              id="nombre"
+              name="nombre"
+              placeholder="Ingresa tu nombre"
+            />
+            <small class="text-danger d-none" id="errorNombre"
+              >El nombre es obligatorio.</small
+            >
+          </div>
+          <!-- Campo Email -->
+          <div class="col-md-6">
+            <label class="form-label" for="email">Email:</label>
+            <input
+              class="form-control"
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Ingresa tu email"
+            />
+            <small class="text-danger d-none" id="errorEmail"
+              >Ingrese un email válido.</small
+            >
+          </div>
+          <!-- Campo Mensaje -->
+          <div class="col-12">
+            <label class="form-label" for="mensaje">Mensaje:</label>
+            <textarea
+              class="form-control"
+              id="mensaje"
+              name="mensaje"
+              placeholder="Escribe tu mensaje"
+              rows="4"
+            ></textarea>
+            <small class="text-danger d-none" id="errorMensaje"
+              >El mensaje debe tener al menos 10 caracteres.</small
+            >
+          </div>
+          <!-- Botón Enviar -->
+          <div class="col-12 text-center">
+            <input
+              class="btn btn-success px-4 py-2"
+              type="submit"
+              value="Enviar"
+            />
+          </div>
+        </form>
+      </section>
+    </main>
 
     <footer class="footerContainer">
       <div class="footer-main-container">
@@ -112,5 +174,12 @@
         Dulce Encuentro Pastelería 2024 &copy; Todos los derechos reservados
       </p>
     </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../js/validacion.js"></script>
   </body>
 </html>
