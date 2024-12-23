@@ -459,6 +459,65 @@ a {
   }
 }
 
+/* Fin de estilos en el index */
+
+/*Galería de Página Productos*/
+.galeriaGridDulces {
+  padding: 20px;
+  width: 90%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 0.5fr 1fr;
+  /* Transicion de la imagen */
+  img {
+    transition: transform 0.3s ease-in-out, z-index 0.3s ease-in-out;
+    position: relative; /* Necesario para usar z-index */
+    z-index: 1; /* Nivel base */
+    border-radius: 15px;
+    &:hover {
+      transform: scale(1.1); /* Agranda la imagen */
+      z-index: 10; /* La coloca por encima de otros elementos */
+    }
+  }
+  grid-template-areas:
+    "lechoza medialunas"
+    "tres medialunas"
+    "alfajor medialunas"
+    "alfajor chocotorta";
+  gap: 25px;
+  .hijo_1 {
+    grid-area: lechoza;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .hijo_2 {
+    grid-area: medialunas;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .hijo_3 {
+    grid-area: tres;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .hijo_4 {
+    grid-area: alfajor;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .hijo_5 {
+    grid-area: chocotorta;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
 /* Estilos para el footer */
 .footerContainer {
   display: flex;
