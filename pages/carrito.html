@@ -35,7 +35,31 @@
         </ul>
       </nav>
     </header>
-    <main>Carrito</main>
+    <main>
+      <section class="container">
+        <h1>Carrito de Productos</h1>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Producto</th>
+              <th>Precio</th>
+              <th>Acción</th>
+            </tr>
+          </thead>
+          <tbody id="tablaCarrito">
+            <!-- Filas dinámicas -->
+          </tbody>
+        </table>
+        <div class="totalCarrito">
+          <h3>Total: $<span id="totalCarrito">0.00</span></h3>
+        </div>
+        <div class="botonConfirmar">
+          <button id="confirmarCompra" class="btn btn-success">
+            Confirmar Compra
+          </button>
+        </div>
+      </section>
+    </main>
 
     <footer class="footerContainer">
       <div class="footer-main-container">
@@ -112,5 +136,6 @@
         Dulce Encuentro Pastelería 2024 &copy; Todos los derechos reservados
       </p>
     </footer>
+    <script src="../js/mostrar_carrito.js"></script>
   </body>
 </html>
